@@ -1,0 +1,16 @@
+//Program to show the concept of Default Arguments
+
+#include<iostream.h>
+#include<conio.h>
+void add(int a=0,int b=0,int c=0);
+void main()
+{
+	clrscr();
+	int x=10,y=20,z=30;
+	add();
+	getch();
+}
+void add(int a,int b,int c)
+{
+	cout<<"Addition is "<<(a+b+c);
+}

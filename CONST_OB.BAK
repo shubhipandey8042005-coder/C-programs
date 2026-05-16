@@ -1,0 +1,32 @@
+// Program To Show Concept Of const Objects.
+
+#include<iostream.h>
+#include<conio.h>
+class BCA
+{
+	public:
+		int a;
+		BCA(int x)
+		{
+			a = x;
+			cout<<"Constructor"<<endl;
+			cout<<"Value Of A : "<<a<<endl;
+		}
+		void show() const
+		{
+			cout<<"\nMember Function"<<endl;
+			cout<<"Value Of A : "<<a<<endl;
+		}
+};
+void main()
+{
+	clrscr();
+	const BCA ob(10); //ERROR : const Variable 'ob' MUST Be Initialized if fun show is not called.
+/*      ob.show();
+	WARNING : Non-const Function BCA :: show() Called For const Object.
+		  if Member Function is void show()
+*/
+//	ob.a = 20; // CANNOT Modify const Object.
+	ob.show();	//For fun. is void show() const
+	getch();
+}

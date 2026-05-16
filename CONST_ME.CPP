@@ -1,0 +1,22 @@
+//Progarm to show concept of const member functions.
+
+#include<iostream.h>
+#include<conio.h>
+class ConstMember
+{
+	public:
+		void show() const;
+};
+void ConstMember :: show() const
+{
+	cout<<"Constant Member Function";
+}
+void main()
+{
+	clrscr();
+	ConstMember ob;
+	ob.show();
+	getch();
+}
+
+

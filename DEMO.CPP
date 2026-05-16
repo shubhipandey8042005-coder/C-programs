@@ -1,0 +1,26 @@
+//Program to Print Simple Messages using Class and Object.
+
+#include<iostream.h>
+#include<conio.h>
+class Demo
+{
+//	private:
+		void display()
+		{
+			cout<<"Welcome in C++"<<endl;
+		}
+	public:
+		void show()
+		{
+			display();
+			cout<<"It is an Object Oriented Programming Language"<<endl;
+		}
+};
+void main()
+{
+	clrscr();
+	Demo ob;
+//	ob.display();
+	ob.show();
+	getch();
+}

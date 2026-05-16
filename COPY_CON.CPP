@@ -1,0 +1,27 @@
+//Program To Show The Concept Of Copy Constructor And Constructor Overloading.
+
+#include<iostream.h>
+#include<conio.h>
+class BCA
+{
+	int a;
+	public:
+		BCA()
+		{
+			a = 10;
+			cout<<"Default Constructor : "<<endl;
+		}
+		BCA(BCA &om)
+		{
+			a = om.a;
+			cout<<"Value of A = "<<a<<endl;
+		//	cout<<"\nValue of Copy Constructor = "<<om.a<<endl;
+		}
+};
+void main()
+{
+	clrscr();
+	BCA ob;
+	BCA oc(ob);
+	getch();
+}

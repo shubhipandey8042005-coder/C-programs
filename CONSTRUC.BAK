@@ -1,0 +1,22 @@
+// Program to show concept of Constructor Inititializing Private Data Member.
+
+#include<iostream.h>
+#include<conio.h>
+class BCA
+{
+	int a;
+	public:
+		BCA()
+		{
+			a = 20;
+			cout<<"Value of A = "<<a;
+		}
+
+};
+void main()
+{
+	clrscr();
+	BCA ob;
+	getch();
+
+}

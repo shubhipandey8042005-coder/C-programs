@@ -1,0 +1,39 @@
+// Program To Show ConceptOf File Handling.
+
+/*	Question : Creating A Employee.txt  File Using Open Method.
+
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+	ofstream obf;
+
+	obf.open("Employee");
+	int Emp_ID;
+	char Emp_Name[20];
+	float Salary;
+
+	clrscr();
+	obf<<"Employee_ID \t";
+	obf<<"Employee_Name \t";
+	obf<<"Employee_Salary \n";
+
+	cout<<"Enter Employee ID : ";
+	cin>>Emp_ID;
+	obf<<Emp_ID<<"\t\t";
+
+	cout<<"Enter Employee Name : ";
+	cin>>Emp_Name;
+	obf<<Emp_Name<<"\t\t";
+
+	cout<<"Enter Employee Salary : ";
+	cin>>Salary;
+	obf<<Salary;
+
+	obf.close();
+
+	getch();
+}

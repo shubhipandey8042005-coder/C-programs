@@ -1,0 +1,17 @@
+//Program to show the concept of const Arguments
+
+#include<iostream.h>
+#include<conio.h>
+void constDemo(const int a);
+void main()
+{
+	clrscr();
+	int x=20;
+	constDemo(x);
+	getch();
+}
+void constDemo(const int a)
+{
+	//a=30;  We cannot modify value of the const object
+	cout<<a;
+}
