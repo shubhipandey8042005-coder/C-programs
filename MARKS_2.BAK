@@ -1,0 +1,70 @@
+/*
+	Program to Show Concept of Accessing Variable & Methods in Different
+	Ways and creating ARRAY of OBJECT
+*/
+
+#include<iostream.h>
+#include<conio.h>
+class Marks
+{
+	private:
+		char Name[10];
+		int roll_no,total;
+		void getdata();
+/*		{
+			cout<<endl;
+			cout<<"Enter Roll No : ";
+			cin>>roll_no;
+			cout<<"Enter Total Marks out of 600 : ";
+			cin>>total;
+		}
+*/
+	public:
+		float per;
+		void calc()
+		{
+			getdata();//Accessing Private Method within the Class
+			cout<<endl;
+			cout<<"Name : "<<Name<<endl;
+			cout<<"Roll No. : "<<roll_no<<endl;
+			per = total/6; //Accessing Private Variable within Class
+			cout<<"Percentage : "<<per<<" % ";
+		}
+		void putdata(); //Only Declaration of Public Method
+};
+void Marks :: getdata() // Creating Body of Private Method Outside of Class
+{
+	cout<<endl;
+	cout<<"Enter Name : ";
+	cin>>Name;
+	cout<<"Enter Roll No : ";
+	cin>>roll_no;
+	cout<<"Enter Total Marks out of 600 : ";
+	cin>>total;
+}
+
+void Marks :: putdata() // Creating Body of Public Method Outside of Class
+{
+	calc();        //Accesing Public Method inside of Member Function
+	if(per>=36) //Accessing Public Variable Outside of Class
+	{
+		cout<<"\nResult : PASS";
+	}
+	else
+	{
+		cout<<"\nResult : FAIL";
+	}
+}
+void main()
+{
+	clrscr();
+	int i;
+	Marks ob[3];
+	for(i=0;i<3;i++)
+	{
+		cout<<"\n\nEnter Data for "<<(i+1)<<"st Student"<<endl;
+		ob[i].putdata(); //Accessing Public Method using Object of Class
+		cout<<"\n----------------------------------------------------";
+	}
+	getch();
+}

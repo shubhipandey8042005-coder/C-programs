@@ -1,0 +1,37 @@
+// Program to show concept of Object as a Function Argument.
+
+#include<iostream.h>
+#include<conio.h>
+class ObjectArgu
+{
+	int a;
+	public:
+		void input(int x)
+		{
+			a= x;
+		}
+		void display()
+		{
+			cout<<"Value of A = "<<a<<endl;
+		}
+		void add(ObjectArgu ob1,ObjectArgu ob2)
+		{
+			a=ob1.a+ob2.a;
+//			cout<<"Addition is "<<a;
+		}
+};
+void main()
+{
+	clrscr();
+	ObjectArgu oc1,oc2,oc3;
+	oc1.input(10);
+	oc2.input(20);
+	oc3.add(oc1,oc2);
+	oc1.display();
+	oc2.display();
+	oc3.display();
+	getch();
+}
+
+
+

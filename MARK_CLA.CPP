@@ -1,0 +1,45 @@
+//Program to Show Concept of Accessing Variable & Methods in Different Ways
+
+#include<iostream.h>
+#include<conio.h>
+class Marks
+{
+	private:
+		int roll_no,total;
+		void getdata()
+		{
+			cout<<endl;
+			cout<<"Enter Roll No : ";
+			cin>>roll_no;
+			cout<<"Enter Total Marks out of 600 : ";
+			cin>>total;
+		}
+	public:
+		float per;
+		void calc()
+		{
+			getdata();//Accessing Private Method within the Class
+			per = total/6; //Accessing Private Variable within Class
+			cout<<"\nPercentage : "<<per<<" % ";
+		}
+		void putdata(); //Only Declaration of Public Method
+};
+void Marks :: putdata() // Creating Body of Public Method Outside of Class
+{
+	calc();        //Accesing Public Method inside of Member Function
+	if(per>=36) //Accessing Public Variable Outside of Class
+	{
+		cout<<"\n\nResult : PASS";
+	}
+	else
+	{
+		cout<<"\n\nResult : FAIL";
+	}
+}
+void main()
+{
+	clrscr();
+	Marks ob;
+	ob.putdata(); //Accessing Public Method using Object of Class
+	getch();
+}

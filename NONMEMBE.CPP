@@ -1,0 +1,33 @@
+//  Program to Show Concept of Member and Nonmember Function.
+
+#include<iostream.h>
+#include<conio.h>
+void msg(); 	// NONMEMBER FUNCTION
+class FriendDemo
+{
+	private:
+		int a;	// DATA MEMBER
+		void show()
+		{
+		      a=10;
+		      cout<<"Value Of A In Private Function : "<<a;
+		}
+	public:
+		void display();
+};
+void FriendDemo :: display()
+{
+	show();
+}
+void main()
+{
+	clrscr();
+	FriendDemo ob;
+	ob.display();
+	msg();
+	getch();
+}
+void msg()
+{
+	cout<<endl<<"Non Member Function ";
+}

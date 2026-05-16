@@ -1,0 +1,38 @@
+//Program To Show Conept Of Multiple Classes
+
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+	public:
+		void show()
+		{
+			cout<<"Welcome In Class A"<<endl;
+		}
+};
+class B
+{
+	public:
+		void display()
+		{
+			cout<<"Welcome In Class B"<<endl;
+		}
+};
+class C
+{
+	public:
+		void Msg()
+		{
+			cout<<"Welcome In Class C"<<endl;
+		}
+};
+void main()
+{
+	clrscr();
+	A ob;
+	ob.show();
+	B oc;
+	oc.display();
+	C od;
+	od.Msg();
+}
