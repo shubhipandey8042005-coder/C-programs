@@ -1,0 +1,48 @@
+//Program To Show Concept Of Circle Generation Algorithm
+
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+void Circle_B()
+{
+	float x,y,x1,y1,p1,r;
+
+	r = 50;
+	x = 0;
+	x1 = 100;
+	y1 = 100;
+	y = r;
+	p1 = 1 - r ;
+
+	for(x,y ; x >= y ;)
+	{
+		if(p1 <= 0)
+		{
+			x = x + 1;
+			y = y;
+			p1 = p1 * 2 * x + 1;
+		}
+		else
+		{
+			x = x + 1;
+			y = y - 1;
+			p1 = p1 * 2 * x + 1 - 2 * y;
+		}
+		x1 = x1 + x;
+		y1 = y1 + y;
+	}
+	circle(x1,y1,r);
+}
+void main()
+{
+	clrscr();
+
+	int gd = DETECT,gm;
+	initgraph(&gd,&gm,"..\\bgi");
+
+	Circle_B();
+
+	getch();
+
+	closegraph();
+}

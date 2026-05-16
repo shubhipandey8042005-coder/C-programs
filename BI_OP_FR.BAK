@@ -1,0 +1,32 @@
+// Program To Show Concept Of Operator Overloading Of Binary Operator +.
+
+#include<iostream.h>
+#include<conio.h>
+class BinaryOp_Friend
+{
+	public:
+		int a;
+		friend BinaryOp_Friend operator +(BinaryOp_Friend ob,BinaryOp_Friend oc);
+		void show()
+		{
+			cout<<"Value Of A = "<<a<<endl;
+		}
+};
+BinaryOp_Friend operator +(BinaryOp_Friend ob,BinaryOp_Friend oc)
+{
+	BinaryOp_Friend om;
+	om.a = ob.a + oc.a;
+	return om;
+}
+void main()
+{
+	clrscr();
+	BinaryOp_Friend ob1,ob2,ob3;
+	ob1.a = 40;
+	ob2.a = 60;
+	ob1.show();
+	ob2.show();
+	ob3 = ob1 + ob2; // Memory : ob3 = operator(ob1,ob2);
+	ob3.show();
+	getch();
+}

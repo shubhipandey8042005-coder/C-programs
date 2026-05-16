@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+	public:
+	void msg()
+	{
+		cout<<"method a"<<endl;
+	}
+};
+class B:virtual public A
+{
+	public:
+	void display()
+	{
+		cout<<"class b"<<endl;
+	}
+
+};
+class C:public virtual A
+{
+	public:
+	void output()
+	{
+		cout<<"class c"<<endl;
+	}
+};

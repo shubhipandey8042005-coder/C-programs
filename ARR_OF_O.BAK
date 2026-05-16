@@ -1,0 +1,45 @@
+// Program to Show Concept of ARRAY of OBJECT
+
+#include<iostream.h>
+#include<conio.h>
+class Employee
+{
+	char Name[20];
+	int age;
+	public:
+		void getdata();
+		void putdata();
+};
+void Employee :: getdata() // Creating Body of Private Method Outside of Class
+{
+	cout<<endl;
+	cout<<"Enter Name : ";
+	cin>>Name;
+	cout<<"Enter Age : ";
+	cin>>age;
+}
+void Employee :: putdata() // Creating Body of Public Method Outside of Class
+{
+	cout<<endl;
+	cout<<"Name : "<<Name<<endl;
+	cout<<"Age : "<<age<<endl;
+}
+void main()
+{
+	clrscr();
+	int i;
+	Employee ob[3];
+	for(i=0;i<3;i++)
+	{
+		cout<<"\nEnter Data for Manager "<<(i+1)<<endl;
+		ob[i].getdata();
+	}
+	cout<<"\n----------------------------------------------------";
+	for(i=0;i<3;i++)
+	{
+		cout<<"\nData of Manager "<<(i+1)<<endl;
+		ob[i].putdata();
+		cout<<"\n----------------------------------------------------";
+	}
+	getch();
+}
