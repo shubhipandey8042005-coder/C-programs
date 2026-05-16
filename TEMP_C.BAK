@@ -1,0 +1,53 @@
+// Program to Convert Celsious into Fahrenheit and Vice-Versa using Class
+
+#include<iostream.h>
+#include<conio.h>
+class Temperature
+{
+	float cel,fah;
+	public:
+		void celsious()
+		{
+			cout<<"Enter Temperature in Celsious : ";
+			cin>>cel;
+			fah = (cel*9/5)+32;
+			cout<<"Teperature in Fahrenheit : "<<fah;
+		}
+		void fahrenheit();
+};
+void Temperature :: fahrenheit()
+{
+		cout<<"Enter Temperature in Fahrenheit : ";
+		cin>>fah;
+		cel = (fah-32)*5/9;
+		cout<<"Teperature in Celsious : "<<cel;
+}
+void main()
+{
+	clrscr();
+	Temperature ob;
+	int choice;
+	cout<<"Press Following Keys For Conversion Of Temperature"<<endl;
+	cout<<"1 for Celsious to Fahrenheit"<<endl;
+	cout<<"2 for Fahrenheit to Celsious"<<endl<<endl;
+	cout<<"Enter Your Choice : ";
+	cin>>choice;
+	switch(choice)
+	{
+		case 1:
+		{
+			ob.celsious();
+			break;
+		}
+		case 2:
+		{
+			ob.fahrenheit();
+			break;
+		}
+		default:
+		{
+			cout<<"Wrong Choice \nPlease Try Again";
+		}
+	}
+	getch();
+}

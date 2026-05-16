@@ -1,0 +1,40 @@
+//
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+class bca
+{
+	public:
+
+	float per;
+	void input()
+	{
+		cout<<"enter your percentage ";
+		cin>>per;
+	}
+	void display()
+	{
+		cout<<"percentage are:"<<per;
+	}
+
+
+};
+void main()
+{
+	clrscr();
+	bca ob;
+	fstream f;
+	/*f.open("CFile.txt",ios::out);
+	ob.input();
+
+	f.write((char *) &ob sizeof(ob));
+	f.close(); */
+
+	f.open("CFile2.txt",ios::in);
+	f.read((char *) &ob sizeof(ob));
+	ob.display();
+	f.close();
+
+	getch();
+
+}
