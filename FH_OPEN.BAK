@@ -1,0 +1,21 @@
+// Program To Show ConceptOf File Handling.
+
+/*	Question :
+
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+	ofstream obf;
+
+	clrscr();
+
+	obf.open("MSc");
+	obf<<"Master In Computer Science ";
+	obf.close();
+
+	getch();
+}

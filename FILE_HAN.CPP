@@ -1,0 +1,17 @@
+//Program To Show Concept Of File Handling.
+
+/* Question : WAP To create A file BCA.txt And Send/Write A Single Line
+ Message For That File.
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+	ofstream outf("BCA");
+	clrscr();
+	outf<<"Bachlor Of Computer Application";
+	outf.close();
+	getch();
+}

@@ -1,0 +1,25 @@
+//file handling
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+	clrscr();
+	ofstream outf;
+	outf.open("Student_record.txt");
+	cout<<"enter your name:";
+	char name[30];
+	cin>>name;
+
+	outf<<name<<endl;
+
+	cout<<"enter your percentage:";
+	float per;
+	cin>>per;
+
+	outf<<per<<endl;
+
+	outf.close();
+
+	getch();
+}
