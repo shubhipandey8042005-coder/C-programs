@@ -1,0 +1,25 @@
+//write a program of showing the concept if Returning Object.
+#include<iostream.h>
+#include<conio.h>
+class ReturnObject
+{
+	public:
+		int a;
+		ReturnObject show()
+		{
+			ReturnObject ob;
+			ob.a=40;
+		       //	cout<<" "<<ob.a;
+			return ob;
+
+		}
+
+};
+void main()
+{
+	clrscr();
+	ReturnObject ob,oc;
+	oc=ob.show();
+	cout<<"Value is= "<<oc.a;
+	getch();
+}

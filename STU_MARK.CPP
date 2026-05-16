@@ -1,0 +1,38 @@
+//program to show the concept of Student Record using multiple files
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+	clrscr();
+	char S_name[30];
+	int S_rollno;
+	float Sub[3],per,Total;
+	ofstream outf("Student_Result.txt");
+	outf<<"Name\tRollno\tJava\tAccess\tPython\tTotal\tPer"<<endl;
+
+	for(int j=0;j<3;j++)
+	{
+	cout<<"Enter Name:";
+	cin>>S_name;
+	outf<<S_name<<"\t";
+	cout<<"Enter Rollno:";
+	cin>>S_rollno<<"\t";
+	cout<<"Enter Marks:"<<endl;
+
+	for(int i=0;i<3;i++)
+		{
+			cout<<"Sub["<<i<<" ]=";
+			cin>>Sub[i];
+			outf<<Sub[i]<<"\t";
+			Total=Total+Sub[i];
+		}
+	}
+	outf<<Total<<"\t";
+	per=Total/3;
+	outf<<per<<"\t";
+	getch();
+}
+
+
+

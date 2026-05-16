@@ -1,0 +1,14 @@
+//program to show the concept of implicit
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+     short a;
+     int b;
+     clrscr();
+     printf("enter a number");
+     scanf("%d",&a);
+     b=a;
+     printf("%d",b);
+     getch();
+}

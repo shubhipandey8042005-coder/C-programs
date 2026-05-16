@@ -1,0 +1,39 @@
+//
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<fstream.h>
+void main()
+{
+	clrscr();
+	int size=80;
+	char line[20];
+	ifstream fin1,fin2;
+	fin1.open("bca");
+	fin2.open("c++");
+
+	for(int i=1;i<=10;i++)
+	{
+		if(fin1.eof() !=0)
+		{
+			cout<<"other course\n";
+			exit(1);
+		}
+		fin1.getline(line,size);
+		cout<<"other course is:bba"<<line;
+		if(fin2.eof()!=0)
+		{
+			cout<<"exit from course"<<endl;
+			exit(1);
+
+		}
+		fin2.getline(line,size);
+		cout<<line<<endl;
+
+
+
+
+
+	}
+	getch();
+}
