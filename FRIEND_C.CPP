@@ -1,0 +1,35 @@
+//Program to show a concept of Friend Class.
+
+#include<iostream.h>
+#include<conio.h>
+class MCA;	// CLASS DECLARATION.
+class BCA
+{
+	int a;
+	friend void show(BCA ob,MCA oc);
+
+};
+class MCA
+{
+	int b;
+	friend void show(BCA ob,MCA oc);
+};
+void show(BCA ob,MCA oc)
+{
+	ob.a=10;
+	oc.b=20;
+	cout<<"Addition is "<<ob.a+oc.b;
+}
+void main()
+{
+	clrscr();
+	BCA ob;
+	MCA oc;
+	show(ob,oc);
+	getch();
+}
+
+
+
+
+

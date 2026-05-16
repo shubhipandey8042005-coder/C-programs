@@ -1,0 +1,52 @@
+//program to show the concept of DDA Algorithm.
+
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+void DDA()
+{
+	float x,y,xn,yn,m,dty,dtx,x1,y1;
+
+	x = 4;
+	y =3;
+	xn= 7;
+	yn= 6;
+	dty = yn - y;
+	dtx = xn - x;
+	x1 = x;
+	y1 = y;
+
+	for(x1,y1; x1<xn && y1<yn;)
+	{
+		if(m<=1)
+		{
+			x1 = x1 + 1;
+			y1 = y1 + m;
+		}
+		else
+		{
+			x1 = x1 + (1/m);
+			y1 = y1 + 1;
+		}
+		line(x,y,x1,y1);
+		dtx = xn - x1;
+		dty = yn - y1;
+		m = dty / dtx;
+	}
+}
+void main()
+{
+
+	int gd = DETECT,gm;
+	initgraph(&gd,&gm,"..\\bgi");
+
+	clrscr();
+
+	line(4,3,7,6);
+
+	DDA();
+
+	getch();
+
+	closegraph();
+}

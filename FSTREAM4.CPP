@@ -1,0 +1,15 @@
+//fstream file concept 4
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+void main()
+{
+	clrscr();
+	fstream file;
+	file.open("xyz.txt",ios::ate);
+	file<<"Use of ate mode";
+	file.close();
+	getch();
+}
+
+
